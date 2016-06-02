@@ -34,6 +34,8 @@
             this.员工管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.员工信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关闭系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.员工信息ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.账单管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +45,7 @@
             this.基本信息ToolStripMenuItem,
             this.商品管理ToolStripMenuItem,
             this.员工管理ToolStripMenuItem,
+            this.账单管理ToolStripMenuItem,
             this.关闭系统ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -65,7 +68,8 @@
             // 员工管理ToolStripMenuItem
             // 
             this.员工管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.员工信息ToolStripMenuItem});
+            this.员工信息ToolStripMenuItem,
+            this.员工信息ToolStripMenuItem1});
             this.员工管理ToolStripMenuItem.Name = "员工管理ToolStripMenuItem";
             this.员工管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.员工管理ToolStripMenuItem.Text = "员工管理";
@@ -73,8 +77,8 @@
             // 员工信息ToolStripMenuItem
             // 
             this.员工信息ToolStripMenuItem.Name = "员工信息ToolStripMenuItem";
-            this.员工信息ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.员工信息ToolStripMenuItem.Text = "员工信息";
+            this.员工信息ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.员工信息ToolStripMenuItem.Text = "新增员工";
             this.员工信息ToolStripMenuItem.Click += new System.EventHandler(this.员工信息ToolStripMenuItem_Click);
             // 
             // 关闭系统ToolStripMenuItem
@@ -83,6 +87,19 @@
             this.关闭系统ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.关闭系统ToolStripMenuItem.Text = "关闭系统";
             this.关闭系统ToolStripMenuItem.Click += new System.EventHandler(this.关闭系统ToolStripMenuItem_Click);
+            // 
+            // 员工信息ToolStripMenuItem1
+            // 
+            this.员工信息ToolStripMenuItem1.Name = "员工信息ToolStripMenuItem1";
+            this.员工信息ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.员工信息ToolStripMenuItem1.Text = "员工信息";
+            this.员工信息ToolStripMenuItem1.Click += new System.EventHandler(this.员工信息ToolStripMenuItem1_Click);
+            // 
+            // 账单管理ToolStripMenuItem
+            // 
+            this.账单管理ToolStripMenuItem.Name = "账单管理ToolStripMenuItem";
+            this.账单管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.账单管理ToolStripMenuItem.Text = "账单管理";
             // 
             // FrmMain
             // 
@@ -111,6 +128,8 @@
         private System.Windows.Forms.ToolStripMenuItem 员工管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 员工信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关闭系统ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 员工信息ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 账单管理ToolStripMenuItem;
     }
 }
 

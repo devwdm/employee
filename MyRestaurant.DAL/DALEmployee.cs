@@ -47,29 +47,6 @@ namespace MyRestaurant.DAL
         #region 新增员工信息
         public bool AddEmployee(Employee employee)
         {
-            //bool addtag = false;
-            //using (SqlConnection conn = new SqlConnection(DBHelper.connString))
-            //{
-            //    conn.Open();
-            //    string sql = "insert into Employee(EmployeeLoginName,EmployeePwd,EmployeeName,EmployeeCollephone,EmployeeSex,EmployeeAge,EmployeeExplation,EmployeeMoney,StatusID) value (@EmployeeLoginName,@EmployeePwd,@EmployeeName,@EmployeeCollephone,@EmployeeSex,@EmployeeAge,@EmployeeExplation,@EmployeeMoney)";
-
-            //    SqlCommand cmd = new SqlCommand(sql, conn);
-            //    cmd.Parameters.AddWithValue("@EmployeeLoginName", employee.EmployeeLoginName);
-            //    cmd.Parameters.AddWithValue("@EmployeePwd", employee.EmployeePwd);
-            //    cmd.Parameters.AddWithValue("@EmployeeName", employee.EmployeeName);
-            //    cmd.Parameters.AddWithValue("@EmployeeCollephone", employee.EmployeeCollephone);
-            //    cmd.Parameters.AddWithValue("@EmployeeSex", employee.EmployeeSex);
-            //    cmd.Parameters.AddWithValue("@EmployeeAge", employee.EmployeeAge);
-            //    cmd.Parameters.AddWithValue("@EmployeeExplation", employee.EmployeeExplation);
-            //    cmd.Parameters.AddWithValue("@EmployeeMoney", employee.EmployeeMoney);
-            //    cmd.Parameters.AddWithValue("@StatusID", employee.StatusID);
-            //    int n = cmd.ExecuteNonQuery();
-            //    if (n == 1)
-            //    {
-            //        addtag = true;
-            //    }
-            //    return addtag;
-            //}
 
             string sql = "insert into Employee(EmployeeLoginName,EmployeePwd,EmployeeName,EmployeeCollephone,EmployeeSex,EmployeeAge,EmployeeExplation,EmployeeMoney,StatusID) values (@EmployeeLoginName,@EmployeePwd,@EmployeeName,@EmployeeCollephone,@EmployeeSex,@EmployeeAge,@EmployeeExplation,@EmployeeMoney,@StatusID)";
             SqlParameter[] parameters = {
@@ -100,5 +77,13 @@ namespace MyRestaurant.DAL
 
         #endregion
 
+
+        #region
+        //public bool ModifyEmployee(Employee employee)
+        //{
+        //    return 
+        //}
+
+        #endregion
     }
 }

@@ -28,5 +28,12 @@ namespace MyRestaurant
             frmEmployee.MdiParent = this;
             frmEmployee.Show();            
         }
+
+        private void 员工信息ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmInfoEmployee frmInfoEmployee = new FrmInfoEmployee();
+            frmInfoEmployee.MdiParent = this;
+            frmInfoEmployee.Show();
+        }
     }
 }
