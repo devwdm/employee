@@ -26,7 +26,7 @@ namespace MyRestaurant
         {
             FrmEmployee frmEmployee = new FrmEmployee();
             frmEmployee.MdiParent = this;
-            frmEmployee.Show();
+            frmEmployee.Show();            
         }
     }
 }

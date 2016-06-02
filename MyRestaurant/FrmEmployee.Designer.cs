@@ -49,7 +49,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtCollephone = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtMoneyEmployee = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -229,21 +231,40 @@
             this.txtDescription.Size = new System.Drawing.Size(265, 269);
             this.txtDescription.TabIndex = 20;
             // 
-            // button1
+            // btnClear
             // 
-            this.button1.Location = new System.Drawing.Point(153, 384);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(153, 384);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 21;
+            this.btnClear.Text = "重置";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(48, 332);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 12);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "月收入";
+            // 
+            // txtMoneyEmployee
+            // 
+            this.txtMoneyEmployee.Location = new System.Drawing.Point(134, 332);
+            this.txtMoneyEmployee.Name = "txtMoneyEmployee";
+            this.txtMoneyEmployee.Size = new System.Drawing.Size(100, 21);
+            this.txtMoneyEmployee.TabIndex = 23;
             // 
             // FrmEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 460);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtMoneyEmployee);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtCollephone);
             this.Controls.Add(this.label8);
@@ -296,6 +317,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCollephone;
         private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtMoneyEmployee;
     }
 }

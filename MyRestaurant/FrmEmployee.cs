@@ -30,6 +30,7 @@ namespace MyRestaurant
         private void FrmEmployee_Load(object sender, EventArgs e)
         {
             cmbStatusFrmEmployeeIntBing();//绑定下拉框的值
+            
 
 
 
@@ -41,6 +42,7 @@ namespace MyRestaurant
         //绑定下拉框的值
         private void cmbStatusFrmEmployeeIntBing()
         {
+
             cmbStatusFrmEmployee.DisplayMember = "StatusName";//cmbStatusFrmEmployee空间显示成员
             cmbStatusFrmEmployee.ValueMember = "StatusID";//空间cmbStatusFrmEmployee值
             cmbStatusFrmEmployee.DataSource = bllStatus.GetAllDALStatus();//cmbStatusFrmEmployee空间绑定数据源
@@ -79,10 +81,11 @@ namespace MyRestaurant
                 employee.EmployeeName = EmployeeName;
                 employee.EmployeeLoginName = EmployeeName;
                 employee.EmployeePwd = EmployeePwd;
-                employee.EmployeeAge =Convert.ToInt32(txtAge.Text);
+                employee.EmployeeAge = Convert.ToInt32(txtAge.Text);
                 employee.EmployeeSex = txtSex.Text;
                 employee.EmployeeExplation = txtDescription.Text;
                 employee.EmployeeCollephone = txtCollephone.Text;
+                employee.EmployeeMoney = Convert.ToDecimal(txtMoneyEmployee.Text);
                 if (bllEmployee.AddEmployee(employee))
                 {
                     lblMerror.Text = "添加成功！";
@@ -94,6 +97,21 @@ namespace MyRestaurant
             }
 
 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+            txtAge.Text = string.Empty;
+            txtCollephone.Text = string.Empty;
+            txtLoginNameEmployee.Text = string.Empty;
+            txtMoneyEmployee.Text = string.Empty;
+            txtDescription.Text = string.Empty;
+            txtPwdEmployee.Text = string.Empty;
+            txtSex.Text = string.Empty;
+            txtNameEmployee.Text = string.Empty;
+            cmbStatusFrmEmployee.Text = "请选择";
+            lblMerror.Text = "请重新输入信息！";
         }
     }
 }
