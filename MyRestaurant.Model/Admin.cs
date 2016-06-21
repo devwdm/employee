@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace MyRestaurant.Model
 {
-  public  class Admin
+    /// <summary>
+    /// 描述：Admin实体类
+    /// </summary>
+    public class Admin
     {
         public int AdminID { get; set; }
         public string AdminLoginName { get; set; }

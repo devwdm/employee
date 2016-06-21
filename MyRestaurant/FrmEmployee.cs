@@ -15,13 +15,13 @@ using MyRestaurant.BLL;
 
 namespace MyRestaurant
 {
-    public partial class FrmEmployee : Form
+    public partial class FrmAddEmployee : Form
     {
         //定义私有变量
         private BLLStatus bllStatus = new BLLStatus();
         private BLLEmployee bllEmployee = new BLLEmployee();
 
-        public FrmEmployee()
+        public FrmAddEmployee()
         {
             InitializeComponent();
         }
@@ -42,20 +42,26 @@ namespace MyRestaurant
         //绑定下拉框的值
         private void cmbStatusFrmEmployeeIntBing()
         {
-
+            IList<Status> listStatus = bllStatus.GetAllDALStatus();
+            listStatus.Insert(0, new Status
+            {
+                StatusID = -1,
+            StatusName="--选择身份类型--",
+            });
             cmbStatusFrmEmployee.DisplayMember = "StatusName";//cmbStatusFrmEmployee空间显示成员
             cmbStatusFrmEmployee.ValueMember = "StatusID";//空间cmbStatusFrmEmployee值
-            cmbStatusFrmEmployee.DataSource = bllStatus.GetAllDALStatus();//cmbStatusFrmEmployee空间绑定数据源
+            cmbStatusFrmEmployee.DataSource = listStatus;//cmbStatusFrmEmployee空间绑定数据源
         }
 
 
         #endregion
-        //新增按钮
+        //新增员工按钮
         private void btnAddFrmEmployee_Click(object sender, EventArgs e)
         {
             string EmployeeName = txtNameEmployee.Text.Trim();
             string EmployeeLoginName = txtLoginNameEmployee.Text.Trim();
             string EmployeePwd = txtPwdEmployee.Text.Trim();
+        
             if (string.IsNullOrEmpty(EmployeeName) && string.IsNullOrEmpty(EmployeeLoginName) && string.IsNullOrEmpty(EmployeePwd))
             {
                 MessageBox.Show("请您填好信息！", "温馨提示");
@@ -78,17 +84,26 @@ namespace MyRestaurant
             else
             {
                 Employee employee = new Employee();
-                employee.EmployeeName = EmployeeName;
-                employee.EmployeeLoginName = EmployeeName;
-                employee.EmployeePwd = EmployeePwd;
+                employee.EmployeeName = txtNameEmployee.Text.Trim();
+                employee.EmployeeLoginName = txtLoginNameEmployee.Text.Trim();
+                employee.EmployeePwd = txtPwdEmployee.Text.Trim();
                 employee.EmployeeAge = Convert.ToInt32(txtAge.Text);
-                employee.EmployeeSex = txtSex.Text;
-                employee.EmployeeExplation = txtDescription.Text;
-                employee.EmployeeCollephone = txtCollephone.Text;
-                employee.EmployeeMoney = Convert.ToDecimal(txtMoneyEmployee.Text);
+                employee.EmployeeSex = txtSex.Text.Trim();
+                employee.EmployeeExplation = txtDescription.Text.Trim();
+                employee.EmployeeCollephone = txtCollephone.Text.Trim();
+                employee.EmployeeMoney = Convert.ToDecimal(txtMoneyEmployee.Text.Trim());
+                employee.StatusID = Convert.ToInt32(cmbStatusFrmEmployee.SelectedValue);
                 if (bllEmployee.AddEmployee(employee))
                 {
                     lblMerror.Text = "添加成功！";
+                    txtAge.Text = string.Empty;
+                    txtCollephone.Text = string.Empty;
+                    txtDescription.Text = string.Empty;
+                    txtLoginNameEmployee.Text = string.Empty;
+                    txtMoneyEmployee.Text = string.Empty;
+                    txtPwdEmployee.Text = string.Empty;
+                    txtSex.Text = string.Empty;
+                    txtNameEmployee.Text = string.Empty;
                 }
                 else
                 {

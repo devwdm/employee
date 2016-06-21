@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace MyRestaurant.Model
 {
-   public class Employee
+
+    /// <summary>
+    /// 描述：Employee 实体类
+    /// </summary>
+
+    public class Employee
     {
         public int EmployeeID { get; set; }
         public int StatusID { get; set; }
@@ -18,6 +23,7 @@ namespace MyRestaurant.Model
         public int EmployeeAge { get; set; }
         public string EmployeeExplation { get; set; }
         public decimal EmployeeMoney { get; set; }
+        public string StatusName { get; set; }
 
     }
 }

@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdmin.Designer.cs">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGoods.Designer.cs">
+      <DependentUpon>FrmGoods.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInfoEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,8 +77,20 @@
     <Compile Include="FrmEmployee.Designer.cs">
       <DependentUpon>FrmEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUpdataEmpInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdataEmpInfo.Designer.cs">
+      <DependentUpon>FrmUpdataEmpInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAdmin.resx">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGoods.resx">
+      <DependentUpon>FrmGoods.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInfoEmployee.resx">
       <DependentUpon>FrmInfoEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEmployee.resx">
       <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdataEmpInfo.resx">
+      <DependentUpon>FrmUpdataEmpInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

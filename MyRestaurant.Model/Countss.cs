@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace MyRestaurant.Model
 {
-  public  class Countss
+
+
+
+    /// <summary>
+    /// 描述：Countss实体类
+    /// </summary>
+    public class Countss
     {
         public int CountID { get; set; }
         public int GoodID { get; set; }

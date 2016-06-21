@@ -1,6 +1,6 @@
 ﻿namespace MyRestaurant
 {
-    partial class FrmEmployee
+    partial class FrmAddEmployee
     {
         /// <summary>
         /// Required designer variable.
@@ -257,7 +257,7 @@
             this.txtMoneyEmployee.Size = new System.Drawing.Size(100, 21);
             this.txtMoneyEmployee.TabIndex = 23;
             // 
-            // FrmEmployee
+            // FrmAddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -286,7 +286,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbStatusFrmEmployee);
             this.Controls.Add(this.label1);
-            this.Name = "FrmEmployee";
+            this.Name = "FrmAddEmployee";
             this.Text = "FrmEmployee";
             this.Load += new System.EventHandler(this.FrmEmployee_Load);
             this.ResumeLayout(false);

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace MyRestaurant.Model
 {
-   public class Status
+
+
+    /// <summary>
+    /// 描述：Status 实体类
+    /// </summary>
+    public class Status
     {
         public int StatusID { get; set; }
         public string StatusName { get; set; }

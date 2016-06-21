@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DALAdmin.cs" />
     <Compile Include="DALEmployee.cs" />
+    <Compile Include="DALGood.cs" />
     <Compile Include="DALStatus.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

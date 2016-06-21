@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 using System.Data;
 using System.Data.SqlClient;
-
 using MyRestaurant.Model;
 
 
@@ -14,11 +13,15 @@ namespace MyRestaurant.DAL
 {
    public class DALStatus
     {
+        /// <summary>
+        /// 描述： 获取所有部门信息
+        /// </summary>
+        /// <returns></returns>
         public IList<Status> GetAllStatus()
         {
             IList<Status> listStatus =new List<Status>() ;//通过泛型集合返回所有Status的信息
 
-            string sql = "select * from Status";//定义SQl语句
+            string sql = @"select * from Status";//定义SQl语句
             SqlDataReader reader = DBHelper.ExecuteReader(sql);//执行SQL语句并返回一天记录
             
                 while (reader.Read())
@@ -27,8 +30,7 @@ namespace MyRestaurant.DAL
                     status.StatusID = int.Parse(reader["StatusID"].ToString());
                     status.StatusName = reader["StatusName"].ToString();
                     listStatus.Add(status);
-                }
-            
+                }           
 
             return listStatus;
         }

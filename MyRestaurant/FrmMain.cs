@@ -24,7 +24,7 @@ namespace MyRestaurant
 
         private void 员工信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEmployee frmEmployee = new FrmEmployee();
+            FrmAddEmployee frmEmployee = new FrmAddEmployee();
             frmEmployee.MdiParent = this;
             frmEmployee.Show();            
         }
@@ -34,6 +34,24 @@ namespace MyRestaurant
             FrmInfoEmployee frmInfoEmployee = new FrmInfoEmployee();
             frmInfoEmployee.MdiParent = this;
             frmInfoEmployee.Show();
+        }
+
+        private void 基本信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void 管理员ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAdmin frmAdmin = new FrmAdmin();
+            frmAdmin.MdiParent = this;
+            frmAdmin.Show();
+        }
+
+        private void 点餐ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGoods frmGoods = new FrmGoods();
+            frmGoods.MdiParent = this;
+            frmGoods.Show();
         }
     }
 }

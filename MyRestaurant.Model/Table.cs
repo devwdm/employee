@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace MyRestaurant.Model
 {
+
+    /// <summary>
+    /// 描述：Table 实体类
+    /// </summary>
     public class Table
     {
         public int TableID { get; set; }
